@@ -1,4 +1,6 @@
 # ALIASES ---------------------------------------------------------------------
+alias bsp=$DOTFILES/install/bootstrap.sh
+
 alias unmount_all_and_exit='unmount_all && exit'
 alias d=docker
 alias dc=docker-compose

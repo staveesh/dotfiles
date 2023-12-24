@@ -4,6 +4,7 @@ source_if_exists () {
     fi
 }
 
+
 source_if_exists $HOME/.env.sh
 source_if_exists $DOTFILES/zsh/history.zsh
 source_if_exists $DOTFILES/zsh/git.zsh
@@ -33,14 +34,15 @@ precmd() {
 
 export VISUAL=nvim
 export EDITOR=nvim
+
 export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scripts/"
 
 eval "$(starship init zsh)"
-
 # VIM MODE (http://dougblack.io/words/zsh-vi-mode.html) -----------------------
 # bindkey -v
 bindkey '^?' backward-delete-char
 
+source_if_exists $HOME/.bash_profile
 # function zle-line-init zle-keymap-select {
 #     VIM_PROMPT="%{$fg[yellow]%}[% NORMAL]% %{$reset_color%}"
 #     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}"
