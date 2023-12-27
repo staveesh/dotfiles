@@ -6,3 +6,6 @@ vim/pack/minpac/start
 job-specific.sh
 scripts/dark-mode-notify
 bin/format-transactions.js
+calcurse/caldav
+zsh-autosuggestions
+zsh-syntax-highlighting

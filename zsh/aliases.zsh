@@ -14,8 +14,9 @@ alias vim='nvim -w ~/.vimlog "$@"'
 alias zn='vim $NOTES_DIR/$(date +"%Y%m%d%H%M.md")'
 
 alias ta='tmux attach -t'
+alias tl='tmux ls'
 
-alias l='exa -lah'
+alias l='exa -lah --sort=modified'
 alias ls=exa
 alias sl=exa
 alias c='clear'
@@ -65,6 +66,11 @@ alias gup='git branch --set-upstream-to=origin/$(git-current-branch) $(git-curre
 
 alias gnext='git log --ancestry-path --format=%H ${commit}..master | tail -1 | xargs git checkout'
 alias gprev='git checkout HEAD^'
+
+# Calcurse
+
+alias cc='calcurse'
+alias cs='calcurse-caldav'
 
 # FUNCTIONS -------------------------------------------------------------------
 # function gg {
@@ -147,6 +153,8 @@ copy-line () {
 open-at-line () {
   vim $(rg --line-number "${1:-.}" | sk --delimiter ':' --preview 'bat --color=always --highlight-line {2} {1}' | awk -F ':' '{print "+"$2" "$1}')
 }
+
+alias calcurse-vdirsyncer='$HOME/.config/calcurse/calcurse-vdirsyncer'
 
 alias ledger='ledger -f "$(find $NOTES_DIR -name transactions.ledger)"'
 

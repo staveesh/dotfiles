@@ -1,0 +1,10 @@
+#!/bin/bash
+
+calcurse-caldav
+
+# Check the exit code
+if [ $? -eq 126 ]; then
+    calcurse-caldav --init=keep-remote 
+    calcurse-caldav
+fi
+

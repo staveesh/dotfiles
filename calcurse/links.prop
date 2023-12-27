@@ -1,0 +1,5 @@
+$DOTFILES/calcurse/conf=$HOME/.config/calcurse/conf
+$DOTFILES/calcurse/calcurse-vdirsyncer=$HOME/.config/calcurse/calcurse-vdirsyncer
+$DOTFILES/calcurse/hooks=$HOME/.config/calcurse/hooks
+$DOTFILES/calcurse/keys=$HOME/.config/calcurse/keys
+$DOTFILES/calcurse/caldav=$HOME/.config/calcurse/caldav
